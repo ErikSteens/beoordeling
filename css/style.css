@@ -1,0 +1,128 @@
+/* Default */
+body {
+	font-family			: sans-serif;
+	font-size			: 14px;
+}
+
+h5 {
+	font-size			: 120%;
+	font-weight			: bold;
+	color				: #7a7676;
+}
+
+.row {
+	margin-left			: 30px;
+}
+
+a, a:visited {
+	text-decoration		: none;
+	color				: black;
+}
+
+nav, content, footer  {
+	margin				: 10px 30px 10px 30px;
+}
+
+image {
+	border-radius		: 30px;
+	border				: 3px gray solid;
+}
+
+label {
+	display				: block;
+	margin-top			: 15px;
+	margin-bottom		: 0px;
+}
+
+p {
+	line-height			: 130%;
+}
+
+tr, th, td {
+	border				: 1px solid silver;
+}
+
+th, td {
+	padding				: 6px;
+	text-align			: left;
+}
+
+th {
+	font-weight			: bold;
+	font-size			: 110%;
+}
+
+td.td_tafel {
+	background			: white;
+}
+
+table.noborder {
+	border				: none;
+}
+
+
+/* Navigation MainMenu */
+.nobullet {
+	list-style-type		: none;
+}
+
+
+/* TABS */
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+/* Footer */
+footer {
+	width				: 100%;
+	position			: relative;
+	bottom				: 0px;
+	display				: block;
+	text-align			: center;
+	padding				: 10px;
+}

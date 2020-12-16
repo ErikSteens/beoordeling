@@ -17,4 +17,4 @@
 	$objPagebuilder = new pagebuilder();
 
 	//Choose your template, is optional, else default template is returned
-	echo $objPagebuilder->getTemplate();
+	echo $objPagebuilder->getTemplate("Dashboard");
