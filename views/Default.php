@@ -19,21 +19,41 @@
 
 			$output .= '<content>';
 				$output .= '<div class="row">';
-					$output .= '<div class="col-xs-12 col-sm-4 col-lg-4">';
+					//$output .= '<div class="col-xs-12 col-sm-4 col-lg-4">';
 
 						//Als gebruiker niet is ingelogd en dit wel moet doen dan toon het inlogformulier
+						//echo "RIGHTS:" .$this->enoughRights;
+						/*
 						if($this->showLoginForm == true) {
 							include_once(CLASSES_PATH . "clsLogin.php");
 							$objLogin = new clsLogin();
 							$output .= $objLogin->form();
 						} else {
-							$output .= $this->submenu->getHtml();
+							if($this->enoughRights === false) {
+								$output .= "Helaas niet genoeg rechten.";
+							} else {
+								$output .= $this->submenu->getHtml();
+							}
+							
 						}
-					$output .= '</div>';
+					$output .= '</div>';*/
 
-					$output .= '<div class="col-xs-12 col-sm-8 col-lg-8">';
-						if($this->showLoginForm == false) {
-							$output .= $this->content->getHtml();
+					$output .= '<div class="col-xs-11 col-sm-11 col-lg-11">';
+					//print "login".$this->showLoginForm;
+					//print "rights".$this->enoughRights;
+
+						if($this->showLoginForm == true) {
+							include_once(CLASSES_PATH . "clsLogin.php");
+							$objLogin = new clsLogin();
+							$output .= $objLogin->form();
+						} else {
+							if($this->showLoginForm == false) {
+								if($this->enoughRights === false) {
+									$output .= "Helaas niet genoeg rechten.";
+								} else {
+									$output .= $this->content->getHtml();
+								}
+							}
 						}
 
 					$output .= '</div>';

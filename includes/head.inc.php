@@ -10,8 +10,8 @@
 				<title>Beoordelingssysteem Vista College</title>
 
 				<!-- HIER NOG ZELF INVULLEN -->
-				<meta name="author" 		content="JOUW NAAM, JOUW E-MAIL">
-				<meta name="designer" 		content="JOUW NAAM">
+				<meta name="author" 		content="Erik Steens, e.steens@vistacollege.nl">
+				<meta name="designer" 		content="Erik Steens">
 
 				<meta name="keywords" 		content="Vista College Beoordelingssysteem">
 				<meta name="description" 	content="Bedoordelingssysteem">
@@ -43,12 +43,13 @@
 					integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
 					crossorigin="anonymous">
 
+				<!-- Bootstrap JavaScript staat in file: includes/footer.inc.php -->
+				<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 				<!-- CUSTOM Stylesheets -->
 				<link href="' . CSS_PATH . 'style.colors.css" 		type="text/css" rel="stylesheet"/>
 				<link href="' . CSS_PATH . 'style.positions.css" 	type="text/css" rel="stylesheet"/>
 				<link href="' . CSS_PATH . 'style.css" 				type="text/css" rel="stylesheet"/>
-
-				<!-- Bootstrap JavaScript staat in file: includes/footer.inc.php -->
 
 				<!-- CUSTOM JavaScript -->
 				<script src="' . JS_PATH . 'functions.js"></script>

@@ -1,4 +1,5 @@
 <?php
+//echo password_hash("erik", PASSWORD_DEFAULT);die;
 	/**
 	 * Require_once means you need these files to continu execute the code
 	 * This init file contains all code to start properly, like paths info and other config like stuff

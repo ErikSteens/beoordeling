@@ -9,6 +9,7 @@
 	$_SESSION = "";
 	session_destroy();
 	session_regenerate_id();
+	session_start();
 
 	//Keer terug naar de pagina waarvan je uitlogd
 	$referer = $_SERVER['HTTP_REFERER'];

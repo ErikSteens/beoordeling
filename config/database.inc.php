@@ -1,6 +1,8 @@
 <?php
 	class database {
-		public static function connect() {
+		private static $numrows = 0;
+
+		public static function dbConnect() {
 			$dbhost     = "localhost";
 			$dbname     = "db_beoordeling";
 			$dbuser     = "usr_beoordeling";
@@ -23,6 +25,34 @@
 			}
 			catch (\PDOException $e) {
 				throw new \PDOException($e->getMessage(), (int)$e->getCode());
+			}
+		}
+
+		public static function getData($p_sSql, $p_aData = "", $print=false) {
+			// execute query on Mysql server
+			$pdo = Database::dbConnect();
+			$stmt = $pdo->prepare($p_sSql);
+            if(is_array($p_aData)) {
+	            $stmt->execute($p_aData);
+            } else {
+	            $stmt->execute();
+            } 	
+			database::$numrows = $stmt->rowCount();
+			$result = $stmt->fetchAll(); // get result
+			if($print === true) { print_r($result); }
+			return $result; // dabase query result
+		}
+
+		public static function getNumrows() {
+			return database::$numrows;
+		}
+
+		public static function jsonParse($p_sValue) {
+			if(is_array($p_sValue)) {
+				return json_encode($p_sValue);
+			}
+			if(is_string($p_sValue)) {
+				return json_decode($p_sValue);
 			}
 		}
 	}

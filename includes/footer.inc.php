@@ -6,7 +6,8 @@
 	 */
 	class footer {
 		public function getHtml() {
-			$output = '<i>Vista College</i> Sittard / Maastricht &copy 2019 / Groep ?';
+			$date = date("M Y");
+			$output = '<i>Vista College</i> Sittard / Maastricht &copy'. $date.' / Erik Steens';
 
 			//Boostrap JS must be included before end tag boby </body>
 			$output .= '<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -18,8 +19,12 @@
 							crossorigin="anonymous"></script>
 
 						<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-						integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-						crossorigin="anonymous"></script>';
+							integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+							crossorigin="anonymous"></script>
+
+						<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
+							integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 
+							crossorigin="anonymous"></script>';
 			return $output;
 		}
 	}

@@ -3,7 +3,7 @@
 
 		public function __construct() {
 			//Call the databaseconnection
-			$this->connection = database::connect();
+			//$this->connection = database::dbConnect();
 		}
 
 		public function getHtml() {

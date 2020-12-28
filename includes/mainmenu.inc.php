@@ -4,20 +4,19 @@
 	 * mainmenu class.
 	 */
 	class mainmenu {
-
-
 		/**
 		 * getHtml function.
 		 *
 		 * @access public
 		 * @return void
-		 *
-		 * Dit is de code van Bootstrap.
-		 * Verander deze naar smaak en eigen inzicht. Vaak is het goed eerst een klein project ernaast
-		 * op te starten en te klooien met de code. Als je begrijpt wat je doet kun je deze kennis en
-		 * kunde in je echte project gebruiken.
 		 */
 		public function getHtml() {
+			if(isset($_SERVER['HTTP_REFERER'])) {
+				$returnto = $_SERVER['HTTP_REFERER'];
+			} else {
+				$returnto = "index.php";
+			}
+			
 			$output = <<<MAINMENU
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
@@ -43,6 +42,23 @@
 			     <!-- MENUITEM 1 LINK -->
 			      <li class="nav-item">
 			        <a class="nav-link" href="docentdashboard.php">Docent dashboard</a>
+				  </li>
+				  
+				  <!-- DROPDOWN ITEM -->
+			      <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle"
+			         	id="navbarDropdown"
+			        	role="button" data-toggle="dropdown"
+			        	aria-haspopup="true" aria-expanded="false">
+			         	Challenges
+			        </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="challenges.php">Lijst challenges</a>
+			          <a class="dropdown-item" href="#">Maak nieuwe challenge</a>
+			          <a class="dropdown-item" href="#">Voeg criteria toe</a>
+			          <div class="dropdown-divider"></div>
+			          <a class="dropdown-item" href="challenges.php?action=inactive">Lijst met inactieve challenges</a>
+			        </div>
 			      </li>
 
 			      <li class="nav-item">
@@ -59,7 +75,6 @@
 			        	href="#" id="navbarDropdown"
 			        	role="button" data-toggle="dropdown"
 			        	aria-haspopup="true" aria-expanded="false">
-
 			         	Formulieren
 			        </a>
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -68,6 +83,10 @@
 			          <div class="dropdown-divider"></div>
 			          <a class="dropdown-item" href="#">Menuitem 3 pas zelf aan</a>
 			        </div>
+			      </li>
+
+				  <li class="nav-item">
+				  	<a class="nav-link" href="$returnto">Ga pagina terug</a>
 			      </li>
 
 					<!-- LOGIN BUTTON -->

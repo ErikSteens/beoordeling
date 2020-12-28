@@ -13,6 +13,8 @@
 	define("JS_PATH"				, ROOT_PATH . "js/");
 	define("CSS_PATH"				, ROOT_PATH . "css/");
 	define("IMAGES_PATH"			, ROOT_PATH . "images/");
+	define("PROCESS_PATH"			, ROOT_PATH . "process/");
 	define("ICONS_PATH"				, ROOT_PATH . IMAGES_PATH . "icons/");
+	define("BOOTSTRAPICONS_PATH"	, ROOT_PATH . ICONS_PATH . "bootstrap/");
 	define("STUDENTS_IMAGES_PATH"	, ROOT_PATH . IMAGES_PATH . "students/");
 	define("TEACHERS_IMAGES_PATH"	, ROOT_PATH . IMAGES_PATH . "teachers/");
